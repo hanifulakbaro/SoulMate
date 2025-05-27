@@ -1,2 +1,2 @@
 # SoulMate
-Dari kamu untuk kamu 
+Dari kamu untuk kamu

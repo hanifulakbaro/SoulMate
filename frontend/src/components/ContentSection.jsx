@@ -7,7 +7,7 @@ export function ContentSection() {
       <div className="flex gap-5 max-md:flex-col">
         <div className="w-6/12 max-md:ml-0 max-md:w-full">
           <img
-            src="/public/input.png"
+            src="input.png"
             alt="Content illustration"
             className="object-contain grow w-full aspect-[1.31] max-md:mt-10"
           />

@@ -8,7 +8,7 @@ export function Header() {
         style={{marginTop: "-20px"}}
         >
       <img
-        src="/public/logo.png"
+        src="logo.png"
         alt="SoulMate Logo"
         className="h-14 w-14 object-contain"
         style={{ height: "120px", width: "120px", objectFit: "contain", marginLeft: "20px"}}

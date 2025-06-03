@@ -30,12 +30,12 @@ const StorySection = () => {
   }, []);
 
   const emotionImages = {
-    joy: "/joy.png",
-    sadness: "/sadness.png",
-    anger: "/anger.png",
-    love: "/love.png",
-    fear: "/fear.png",
-    unknown: "/neutral.png",
+    joy: "joy.png",
+    sadness: "sadness.png",
+    anger: "anger.png",
+    love: "love.png",
+    fear: "fear.png",
+    unknown: "neutral.png",
   };
 
   const getEmoticon = (label) => {
@@ -49,7 +49,7 @@ const StorySection = () => {
       <article className="w-[67%] max-md:w-full max-md:ml-0">
         <div className="relative flex items-center justify-center h-[250px]">
           <img
-            src="/bubble4.png"
+            src="bubble4.png"
             alt="Writing background"
             className="absolute inset-0 w-full h-full object-contain z-0"
           />

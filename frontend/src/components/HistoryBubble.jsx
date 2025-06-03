@@ -16,7 +16,7 @@ const HistoryBubble = ({ id, story, timestamp }) => {
     >
       {/* Perbaiki path image: /public tidak perlu */}
       <img
-        src="/bubble3.png"
+        src="bubble3.png"
         alt="History bubble"
         className="absolute inset-0 w-full h-full object-contain"
         style={{ marginTop: "-240px" }}

@@ -6,60 +6,60 @@ const EmotionSummary = ({ emotionCounts, mostFrequent, leastFrequent, timeUnit }
     joy: {
       most: {
         message: "Joy seemed to follow you everywhere! May your happiness continue to inspire those around you. ✨",
-        img: "/joy.png",
+        img: "joy.png",
         label: "Most Frequent Joy",
       },
       least: {
         message: "Happiness felt distant, but even small joys matter. May you discover moments that bring light to your day. 💛",
-        img: "/joy.png",
+        img: "joy.png",
         label: "Least Frequent Joy",
       },
     },
     sadness: {
       most: {
         message: "Melancholy stayed close, but emotions make us human. May you find comfort in warmth and healing. 🌿",
-        img: "/sadness.png",
+        img: "sadness.png",
         label: "Most Frequent Sadness",
       },
       least: {
         message: "Sadness rarely visited you—what a beautiful thing! May your heart stay light and full of hope. 🌟",
-        img: "/sadness.png",
+        img: "sadness.png",
         label: "Least Frequent Sadness",
       },
     },
     anger: {
       most: {
         message: "Frustration came often, but storms always pass. May patience and understanding guide your path. 🌤",
-        img: "/anger.png",
+        img: "anger.png",
         label: "Most Frequent Anger",
       },
       least: {
         message: "Anger was a rare guest in your life. May peace and calm continue to surround you. 🌼",
-        img: "/anger.png",
+        img: "anger.png",
         label: "Least Frequent Anger",
       },
     },
     love: {
       most: {
         message: "Your heart is full of love! May your warmth and kindness reach even more souls. ❤️",
-        img: "/love.png",
+        img: "love.png",
         label: "Most Frequent Love",
       },
       least: {
         message: "Love felt distant, but it's never truly gone. May connections find their way to you in unexpected ways. 💕",
-        img: "/love.png",
+        img: "love.png",
         label: "Least Frequent Love",
       },
     },
     fear: {
       most: {
         message: "Uncertainty clouded many moments, but strength is in you. May courage lead you beyond the shadows. 🔥",
-        img: "/fear.png",
+        img: "fear.png",
         label: "Most Frequent Fear",
       },
       least: {
         message: "Fear barely touched your journey! May your confidence continue to light your way. ⚡",
-        img: "/fear.png",
+        img: "fear.png",
         label: "Least Frequent Fear",
       },
     },

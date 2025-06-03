@@ -7,7 +7,7 @@ export function InputSection({ value, onChange }) {
         {/* Bubble input besar */}
         <div className="relative w-[900px] h-[250px] ml-[-5px]">
           <img
-            src="/public/bubble.png"
+            src="bubble.png"
             alt="Input background"
             className="absolute top-0 left-0 w-full h-full object-contain"
           />
@@ -29,7 +29,7 @@ export function InputSection({ value, onChange }) {
 
         {/* Icon payung */}
         <img
-          src="/public/icon.png"
+          src="icon.png"
           alt="Icon"
           className="object-contain w-[110px] h-[110px] ml-4"
           style={{ marginBottom: "60px" }}

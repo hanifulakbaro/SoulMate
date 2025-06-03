@@ -10,12 +10,12 @@ function LoginPage() {
        style={{ background: "#D3E3F3"}}>
         <div className="flex relative flex-col px-20 pb-40 h-screen max-md:px-5 max-md:pb-24 max-md:max-w-full">
           <img
-            src="/public/login.png"
+            src="login.png"
             alt="Login"
             className="object-cover absolute inset-0 size-full"
           />
           <img
-            src="https://cdn.builder.io/api/v1/image/assets/TEMP/5b2e85311e85da8ff59271b14d5746aadbdd9ebc?placeholderIfAbsent=true&apiKey=885843f1fee842969266efa7faebd8fc"
+            src="logo.png"
             alt="Logo"
             className="object-contain self-center max-w-full aspect-[1.19] w-[126px]"
           />

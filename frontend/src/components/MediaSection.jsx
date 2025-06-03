@@ -23,7 +23,7 @@ const MediaSection = ({ selectedTab, mediaRef, mediaData }) => {
               {/* Music */}
               <div className="w-[56%] max-md:w-full relative">
                 <img
-                  src="/playermusic.png"
+                  src="playermusic.png"
                   alt="Music recommendation"
                   className="object-contain grow mt-14 w-full rounded-none aspect-[0.78] max-md:mt-10"
                   style={{ marginTop: "20px", marginLeft: "-30px" }}
@@ -64,7 +64,7 @@ const MediaSection = ({ selectedTab, mediaRef, mediaData }) => {
                     : "No movie recommendation"}
                 </p>
                 <img
-                  src="/clappermovie.png"
+                  src="clappermovie.png"
                   alt="Movie recommendation"
                   className="object-contain grow w-full rounded-none aspect-[0.54] max-md:mt-10"
                   style={{ marginTop: "-30px", marginLeft: "70px", marginBottom: "50px" }}

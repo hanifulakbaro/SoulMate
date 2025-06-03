@@ -14,7 +14,7 @@ const LandingPage = () => {
         className="flex flex-col h-screen w-full pb-20 overflow-y-auto bg-gradient-to-b from-[#D3E3F3] to-white">
         <Header />
         <img
-            src="/public/landing.png"
+            src="landing.png"
             alt="landing"
             className="max-w-full max-h-screen object-contain"
         />

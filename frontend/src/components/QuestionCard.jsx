@@ -4,7 +4,7 @@ export function QuestionCard() {
   return (
     <div>
       <img
-        src="/public/question.png"
+        src="question.png"
         alt="Card background"
         className="object-cover w-[500px] h-auto"
         style={{marginLeft: "20px"}}

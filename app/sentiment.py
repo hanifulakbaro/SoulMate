@@ -1,7 +1,7 @@
 from transformers import AutoModelForSequenceClassification, AutoTokenizer
 import torch
 import os
-from app.config import settings
+from config import settings
 
 model_path = settings.MODEL_PATH
 model = AutoModelForSequenceClassification.from_pretrained(model_path, num_labels=6)

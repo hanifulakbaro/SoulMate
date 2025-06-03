@@ -9,9 +9,9 @@ from passlib.context import CryptContext
 from fastapi import Depends, HTTPException, status
 from fastapi.security import OAuth2PasswordBearer
 from sqlalchemy.orm import Session
-from app.database import get_db # Pastikan path ini benar
-from app.models import User # Pastikan path ini benar
-from app.config import settings # <<< IMPORT SETTINGS
+from database import get_db # Pastikan path ini benar
+from models import User # Pastikan path ini benar
+from config import settings # <<< IMPORT SETTINGS
 
 # Konfigurasi Hashing Password
 pwd_context = CryptContext(schemes=["bcrypt"], deprecated="auto")

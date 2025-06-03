@@ -7,10 +7,10 @@ from datetime import datetime, timedelta
 import random
 from typing import List
 
-from app import sentiment, database, models, schemas
-from app.database import get_db
-from app.models import User, SentimentRecord, Movie, Music, RecommendationRecord
-from app.schemas import (
+import sentiment
+from database import get_db
+from models import User, SentimentRecord, Movie, Music, RecommendationRecord
+from schemas import (
     TextRequest,
     AnalysisResult,
     UserCreate,
@@ -22,13 +22,13 @@ from app.schemas import (
     TokenData,
     SentimentSchema
 )
-from app.security import (
+from security import (
     get_password_hash,
     verify_password,
     create_access_token,
     get_current_user
 )
-from app.config import settings
+from config import settings
 
 app = FastAPI()
 

@@ -153,8 +153,8 @@ async def get_recommendations(
 
     # Peta emosi lawan
     opposite_emotion_map = {
-        "joy": "sadness",
-        "love": "anger",
+        "joy": "joy",
+        "love": "love",
         "anger": "love",
         "fear": "joy",
         "sadness": "love",

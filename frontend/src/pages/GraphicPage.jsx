@@ -44,23 +44,69 @@ function Graph() {
 
   const processEmotionData = (data) => {
     const counts = {};
-    let most = null;
-    let least = null;
 
+    // Step 1: Kumpulkan semua hitungan emosi dari data
     for (const date in data) {
       for (const emotion in data[date]) {
         counts[emotion] = (counts[emotion] || 0) + data[date][emotion].count;
-
-        if (!most || counts[emotion] > counts[most]) {
-          most = emotion;
-        }
-        if (!least || counts[emotion] < counts[least]) {
-          least = emotion;
-        }
       }
     }
 
-    setEmotionCounts(counts);
+    // Step 2: Temukan emosi paling sering dan paling jarang dari 'counts' yang sudah lengkap
+    let most = null;
+    let least = null;
+    let minCount = Infinity; // Inisialisasi dengan nilai sangat besar
+    let maxCount = -Infinity; // Inisialisasi dengan nilai sangat kecil
+
+    // Iterasi melalui semua emosi yang terhitung
+    for (const emotion in counts) {
+      const currentCount = counts[emotion];
+
+      // Temukan yang paling sering
+      if (currentCount > maxCount) {
+        maxCount = currentCount;
+        most = emotion;
+      }
+
+      // Temukan yang paling jarang
+      if (currentCount < minCount) {
+        minCount = currentCount;
+        least = emotion;
+      }
+    }
+
+    // *Penting:* Jika ada emosi yang tidak muncul sama sekali di data (count 0),
+    // tapi ingin dihitung sebagai "paling jarang", Anda perlu memastikan
+    // counts juga mencakup emosi dengan count 0 yang tidak ada di data API.
+    // Misalnya, inisialisasi semua emosi ke 0 terlebih dahulu:
+    const allEmotions = ["joy", "sadness", "anger", "fear", "love"]; // Daftar semua emosi yang mungkin
+    const finalCounts = {};
+    allEmotions.forEach(emotion => {
+      finalCounts[emotion] = counts[emotion] || 0; // Ambil dari hasil hitungan atau 0 jika tidak ada
+    });
+
+    // Ulangi pencarian most/least dari finalCounts yang sudah lengkap
+    most = null;
+    least = null;
+    minCount = Infinity;
+    maxCount = -Infinity;
+
+    for (const emotion in finalCounts) {
+      const currentCount = finalCounts[emotion];
+
+      if (currentCount > maxCount) {
+        maxCount = currentCount;
+        most = emotion;
+      }
+
+      if (currentCount < minCount) {
+        minCount = currentCount;
+        least = emotion;
+      }
+    }
+
+
+    setEmotionCounts(finalCounts); // Pastikan emotionCounts menyimpan semua emosi, termasuk yang 0
     setMostFrequent(most);
     setLeastFrequent(least);
   };

@@ -1,12 +1,14 @@
 import React, { useState } from 'react';
 
 const Filter = ({ onChange }) => {
-  const [customRange, setCustomRange] = useState(false);
+  // customRange state tidak lagi diperlukan jika opsi "custom" dihapus,
+  // tetapi saya akan menyimpannya jika nanti Anda ingin menambah fitur lain.
+  // const [customRange, setCustomRange] = useState(false); 
 
   const handleFilterChange = (e) => {
     const value = e.target.value;
-    setCustomRange(value === "custom");
-    onChange({ type: value });
+    // setCustomRange(value === "custom"); // Baris ini tidak lagi relevan
+    onChange({ type: value }); // Kirim nilai filter ke parent component
   };
 
   return (
@@ -22,15 +24,16 @@ const Filter = ({ onChange }) => {
       >
         <option value="week">Last Week</option>
         <option value="month">Last Month</option>
-        <option value="custom">Custom Range</option>
+        {/* Opsi "Custom Range" dihapus */}
       </select>
 
-      {customRange && (
+      {/* Bagian input tanggal untuk customRange dihapus */}
+      {/* {customRange && (
         <div className="mt-3 flex gap-3" style={{ marginLeft: "176px", marginTop: "-25px", marginBottom: "20px" }}>
           <input type="date" style={{ fontFamily: "Nunito", marginRight: "5px", border: "1px", borderRadius: "5px" }} />
           <input type="date" style={{ fontFamily: "Nunito", border: "1px", borderRadius: "5px" }} />
         </div>
-      )}
+      )} */}
     </section>
   );
 };

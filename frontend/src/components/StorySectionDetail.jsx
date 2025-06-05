@@ -1,14 +1,14 @@
-// import React from "react";
-// import MoodButton from "./MoodButton";
+// import React from 'react';
+// import MoodButton from './MoodButton'; // Import MoodButton karena digunakan di sini
 
 // const StorySectionDetail = ({ story, emotion }) => {
 //   const emotionImages = {
-//     joy: "joy.png",
-//     sadness: "sadness.png",
-//     anger: "anger.png",
-//     love: "love.png",
-//     fear: "fear.png",
-//     unknown: "neutral.png",
+//     joy: "/joy.png",
+//     sadness: "/sadness.png",
+//     anger: "/anger.png",
+//     love: "/love.png",
+//     fear: "/fear.png",
+//     unknown: "/neutral.png",
 //   };
 
 //   const getEmoticon = (label) => {
@@ -16,44 +16,47 @@
 //     return emotionImages[label.toLowerCase()] || emotionImages.unknown;
 //   };
 
-//   const displayedEmotion =
-//     emotion && typeof emotion === "string"
-//       ? emotion.charAt(0).toUpperCase() + emotion.slice(1).toLowerCase()
-//       : "Neutral";
-
-//   const imageSrc = getEmoticon(emotion);
-
 //   return (
 //     <section className="flex gap-5 max-md:flex-col">
 //       {/* KIRI */}
-//       <article className="w-[67%] max-md:w-full">
+//       <article className="w-[67%] max-md:w-full max-md:ml-0">
 //         <div className="relative flex items-center justify-center h-[250px]">
 //           <img
-//             src="bubble4.png"
+//             src="/bubble4.png"
 //             alt="Writing background"
 //             className="absolute inset-0 w-full h-full object-contain z-0"
 //           />
-//           <p className="z-10 text-[17px] font-nunito text-black text-center max-w-[600px] px-4">
-//             {story?.trim()
-//               ? story
-//               : "Tidak ada curhatan untuk ditampilkan."}
+//           <p className="z-10 text-[17px] font-nunito text-black text-center max-w-[480px] px-4">
+//             {story || "Curhatan tidak tersedia."}
 //           </p>
 //         </div>
 //       </article>
 
 //       {/* KANAN */}
-//       <aside className="w-[33%] max-md:w-full max-md:ml-0 -ml-[120px]">
-//         <div className="flex flex-col items-center rounded-3xl shadow-[4px_4px_4px_rgba(0,0,0,0.25)] bg-gradient-to-br from-white to-[#D4E3F3] w-[270px] h-[250px]">
+//       <aside className="w-[33%] max-md:w-full ml-5 max-md:ml-0">
+//         <div
+//           className="flex flex-col items-center rounded-3xl shadow-[4px_4px_4px_rgba(0,0,0,0.25)]"
+//           style={{
+//             background: "linear-gradient(130deg, white, #D4E3F3)",
+//             width: "270px",
+//             height: "250px",
+//             marginLeft: "-120px",
+//             borderRadius: "20px"
+//           }}
+//         >
 //           <h3 className="text-4xl text-center text-sky-700 mt-4">
 //             Looks like you're feeling
 //           </h3>
 //           <img
-//             src={imageSrc}
-//             alt={`Mood: ${displayedEmotion}`}
-//             className="object-contain mt-6 w-[101px] aspect-square"
+//             src={getEmoticon(emotion)}
+//             alt="Mood indicator"
+//             className="object-contain mt-6 max-w-full aspect-square w-[130px]"
+//             style={{marginTop: "-7px"}}
 //           />
 //           <div className="mt-6">
-//             <MoodButton>{displayedEmotion}</MoodButton>
+//             <MoodButton>
+//               {emotion ? emotion.charAt(0).toUpperCase() + emotion.slice(1) : "Neutral"}
+//             </MoodButton>
 //           </div>
 //         </div>
 //       </aside>
@@ -91,7 +94,7 @@ const StorySectionDetail = ({ story, emotion }) => {
             alt="Writing background"
             className="absolute inset-0 w-full h-full object-contain z-0"
           />
-          <p className="z-10 text-[17px] font-nunito text-black text-center max-w-[500px] px-4">
+          <p className="z-10 text-[17px] font-nunito text-black text-center max-w-[430px] px-4">
             {story || "Curhatan tidak tersedia."}
           </p>
         </div>

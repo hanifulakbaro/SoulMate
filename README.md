@@ -7,9 +7,9 @@ SoulMate adalah aplikasi yang membantu pengguna mengekspresikan perasaan mereka 
 ## 🧠 Fitur Utama
 
 - 📝 Input curhatan bebas dari pengguna
-- 🤖 Deteksi emosi otomatis (joy, sadness, anger, fear, love, neutral)
+- 🤖 Deteksi emosi otomatis (joy, sadness, anger, fear, love, others)
 - 🎧 Rekomendasi musik dan film berdasarkan emosi
-- 📈 Visualisasi grafik distribusi emosi mingguan/bulanan/custom
+- 📈 Visualisasi grafik distribusi emosi mingguan/bulanan
 - 🕓 Riwayat curhatan dan rekomendasi
 - 🐳 Arsitektur berbasis Docker (frontend, backend, database)
 

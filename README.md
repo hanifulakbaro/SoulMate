@@ -21,7 +21,7 @@ SoulMate adalah aplikasi yang membantu pengguna mengekspresikan perasaan mereka 
 |------------|----------------------------------|
 | Frontend   | React, Tailwind CSS              |
 | Backend    | FastAPI, Transformers, PyTorch   |
-| Model      | Sentiment classifier (HuggingFace) |
+| Model      | Sentiment Analysis (DistilBERT)  |
 | Database   | PostgreSQL                       |
 | Container  | Docker, Docker Compose           |
 
